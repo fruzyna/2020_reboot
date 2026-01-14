@@ -57,7 +57,6 @@ public class Robot extends LoggedRobot {
             Logger.addDataReceiver(new WPILOGWriter(LogFileUtil.addPathSuffix(logPath, "_sim")));
             break;
         }
-        Logger.registerURCL(URCL.startExternal(CANConstants.aliasMap));
 
         CanBridge.runTCP();
     }

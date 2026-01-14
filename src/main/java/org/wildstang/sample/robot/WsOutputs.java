@@ -7,7 +7,6 @@ import org.wildstang.framework.hardware.OutputConfig;
 import org.wildstang.framework.io.outputs.Output;
 import org.wildstang.hardware.roborio.outputs.config.WsMotorControllers;
 import org.wildstang.hardware.roborio.outputs.config.WsSparkConfig;
-import org.wildstang.hardware.roborio.outputs.config.WsSparkFollowerConfig;
 
 /**
  * Output mappings are stored here.
@@ -19,31 +18,15 @@ public enum WsOutputs implements Outputs {
     // ---------------------------------
     // Drive Motors
     // ---------------------------------
-    DRIVE1("Module 1 Drive Motor", new WsSparkConfig(CANConstants.DRIVE1, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    ANGLE1("Module 1 Angle Motor", new WsSparkConfig(CANConstants.ANGLE1, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    DRIVE2("Module 2 Drive Motor", new WsSparkConfig(CANConstants.DRIVE2, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    ANGLE2("Module 2 Angle Motor", new WsSparkConfig(CANConstants.ANGLE2, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    DRIVE3("Module 3 Drive Motor", new WsSparkConfig(CANConstants.DRIVE3, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    ANGLE3("Module 3 Angle Motor", new WsSparkConfig(CANConstants.ANGLE3, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    DRIVE4("Module 4 Drive Motor", new WsSparkConfig(CANConstants.DRIVE4, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    ANGLE4("Module 4 Angle Motor", new WsSparkConfig(CANConstants.ANGLE4, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    LIFT("Lift Motor", new WsSparkConfig(CANConstants.LIFT1, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    LIFT_FOLLOWER("Lift Follower", new WsSparkConfig(CANConstants.LIFT2, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    ARM("Arm Motor", new WsSparkConfig(CANConstants.ARM, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    CORAL_INTAKE("Coral Intake", new WsSparkConfig(CANConstants.CORAL, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    ALGAE_INTAKE("Algae Intake", new WsSparkConfig(CANConstants.ALGAE, WsMotorControllers.SPARK_FLEX_BRUSHLESS)),
-    CLIMB1("Climb 1 Motor", new WsSparkConfig(CANConstants.CLIMB1, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    //CLIMB2("Climb 2 Motor Follow", new WsSparkFollowerConfig("Climb 1 Motor", CANConstants.CLIMB2, WsMotorControllers.SPARK_MAX_BRUSHLESS, true)),
-    GROUND1("Ground Intake 1 Motor", new WsSparkConfig(CANConstants.GROUND1, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    GROUND2("Ground Intake 2 Motor", new WsSparkConfig(CANConstants.GROUND2, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
-    PIVOT("Ground Intake Pivot", new WsSparkConfig(CANConstants.PIVOT, WsMotorControllers.SPARK_MAX_BRUSHLESS)),
     
     // ---------------------------------
     // Other Motors
     // ---------------------------------
-
-
-
+    TURRET_FLYWHEEL_LEFT("Turret Flywheel Left", new WsSparkConfig(CANConstants.TURRET_FLYWHEEL_LEFT, WsMotorControllers.SPARK_MAX_BRUSHED)),
+    TURRET_FLYWHEEL_RIGHT("Turret Flywheel Right", new WsSparkConfig(CANConstants.TURRET_FLYWHEEL_RIGHT, WsMotorControllers.SPARK_MAX_BRUSHED, true)),
+    TURRET_HOOD("Turret Hood", new WsSparkConfig(CANConstants.TURRET_HOOD, WsMotorControllers.SPARK_MAX_BRUSHED)),
+    TURRET_KICKER("Turret Kicker", new WsSparkConfig(CANConstants.TURRET_KICKER, WsMotorControllers.SPARK_MAX_BRUSHED)),
+    TURRET_ANGLE("Turret Angle", new WsSparkConfig(CANConstants.TURRET_ANGLE, WsMotorControllers.SPARK_MAX_BRUSHED)),
 
     // ---------------------------------
     // Solenoids
